@@ -2,7 +2,7 @@
 
 ## module diagram
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\key_control_module.png)
+![key_control_module](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/key_control_module.png)
 
 ## signals
 
