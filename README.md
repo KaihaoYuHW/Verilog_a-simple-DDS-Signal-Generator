@@ -1,2 +1,32 @@
-# Verilog_a-simple-DDS-Signal-Generator
-a simple DDS Signal Generator designed with AD/DA converter and FPGA
+# a simple DDS Signal Generator
+
+## Principle
+
+DDS is Direct Digital Synthesizer, also called signal generator. It is used to generate various signal waveforms such as sin, sawtooth, square waves, and signals of different frequencies.
+
+![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_architecture.png)
+
+- CLK: system clock
+- F_WORD: It is an integer and determines the output signal's frequency. The larger value of output signal frequency is, the smaller value of lower output signal frequency is.
+- P_WORD: It is an integer controlling the phase offset of the output signal. 
+- output: frequency is fOUT
+
+## Experiment Goals
+
+Design a simple DDS signal generator using an FPGA and an externally high-speed AD/DA (Analog-to-Digital/Digital-to-Analog) converter. The system use button to select 4 kinds of waveform (sine wave, square wave, triangle wave, and sawtooth wave). In addition, the generator should be able to adjust frequency and phase.
+
+## Design
+
+The design of the DDS signal generator involves four main components. The D/A converter is handled by an externally high-speed AD/DA board. The remaining three components, namely the phase accumulator, phase modulator, and waveform data table ROM, are managed by the FPGA. 
+
+![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\top_dds.png)
+
+- Inside the key control module, four key filter modules are instantiated to get the four steady input key signals. 
+- The filtered signals from the four keys are then combined as a waveform selection signal, which is an input of DDS module. 
+- In DDS module, a ROM IP core is instantiated, storing signals of sin wave, square wave, triangle wave, and sawtooth wave in sequential order. Based on the input waveform selection signal, the corresponding signal waveform is read from the ROM, and the samples of waveform's amplitude is output. 
+- This output is then sent to the AD/DA board. The board generates an analog signal corresponding to the input digital signal in order to represent the selected waveform.
+- Adjustments to the output signal's frequency and phase can be achieved by changing parameters in the DDS module.
+
+## implementation
+
+![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_waveform1.png)
