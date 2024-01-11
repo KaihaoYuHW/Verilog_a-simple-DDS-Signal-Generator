@@ -2,5 +2,5 @@
 
 ## module diagram
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\top_dds.png)
+![top_dds](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/top_dds.png)
 
