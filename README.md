@@ -1,10 +1,17 @@
 # a simple DDS Signal Generator
+## project structure
+- "doc": the information for each module (see .md)
 
+- "rtl": the implementation of all modules (see .v)
+
+- "sim": all testbenches of each module
+
+***
 ## Principle
 
 DDS is Direct Digital Synthesizer, also called signal generator. It is used to generate various signal waveforms such as sin, sawtooth, square waves, and signals of different frequencies.
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_architecture.png)
+![dds_architecture](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/dds_architecture.png)
 
 - CLK: system clock
 - F_WORD: It is an integer and determines the output signal's frequency. The larger value of output signal frequency is, the smaller value of lower output signal frequency is.
@@ -19,7 +26,7 @@ Design a simple DDS signal generator using an FPGA and an externally high-speed 
 
 The design of the DDS signal generator involves four main components. The D/A converter is handled by an externally high-speed AD/DA board. The remaining three components, namely the phase accumulator, phase modulator, and waveform data table ROM, are managed by the FPGA. 
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\top_dds.png)
+![top_dds](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/top_dds.png)
 
 - Inside the key control module, four key filter modules are instantiated to get the four steady input key signals. 
 - The filtered signals from the four keys are then combined as a waveform selection signal, which is an input of DDS module. 
@@ -29,4 +36,4 @@ The design of the DDS signal generator involves four main components. The D/A co
 
 ## implementation
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_waveform1.png)
+![dds_waveform1](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/dds_waveform1.png)
