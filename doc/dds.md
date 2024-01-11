@@ -2,7 +2,7 @@
 
 ## module diagram
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_module.png)
+![dds_module](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/dds_module.png)
 
 ## signals
 
@@ -20,6 +20,6 @@
 
 ## waveform
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_waveform1.png)
+![dds_waveform1](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/dds_waveform1.png)
 
-![](E:\IC_design\Verilog\FPGA_S6\top_dds\doc\dds_waveform2.png)
+![dds_waveform2](https://github.com/KaihaoYuHW/Verilog_a-simple-DDS-Signal-Generator/blob/main/doc/dds_waveform2.png)
